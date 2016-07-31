@@ -1,0 +1,6 @@
+INDEX VERSION 1.122+C:\Workspace_Folder\EduMgmtSystem_ver0.1\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2901133159.index
+1054890887.index
+1858571795.index
+3818419576.index
+24797173.index

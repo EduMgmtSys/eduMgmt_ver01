@@ -1,0 +1,108 @@
+!SESSION 2016-07-06 16:05:40.723 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data C:\Workspace_Folder\EduMgmtSystem_ver0.1 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-06 17:00:57.038
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-06 17:01:02.759
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.jmx.integration 4 0 2016-07-06 17:01:08.063
+!MESSAGE Error connecting to jmx for server JBoss EAP 6.1 Runtime Server
+!STACK 1
+org.jboss.tools.jmx.core.JMXException: Authentication against the remote JBoss instance has failed. Please verify your management credentials in the server editor.
+	at org.jboss.ide.eclipse.as.jmx.integration.JBoss71ServerConnection.createConnection(JBoss71ServerConnection.java:81)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:143)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:127)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:116)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.connectToStartedServer(JBossServerConnection.java:233)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection$1.run(JBossServerConnection.java:225)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: javax.security.sasl.SaslException: Authentication failed: the server presented no authentication mechanisms
+	at org.jboss.remoting3.remote.ClientConnectionOpenListener$Capabilities.handleEvent(ClientConnectionOpenListener.java:388)
+	at org.jboss.remoting3.remote.ClientConnectionOpenListener$Capabilities.handleEvent(ClientConnectionOpenListener.java:242)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:72)
+	at org.xnio.channels.TranslatingSuspendableChannel.handleReadable(TranslatingSuspendableChannel.java:189)
+	at org.xnio.channels.TranslatingSuspendableChannel$1.handleEvent(TranslatingSuspendableChannel.java:103)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:72)
+	at org.xnio.channels.TranslatingSuspendableChannel.handleReadable(TranslatingSuspendableChannel.java:189)
+	at org.xnio.ssl.JsseConnectedSslStreamChannel.handleReadable(JsseConnectedSslStreamChannel.java:183)
+	at org.xnio.channels.TranslatingSuspendableChannel$1.handleEvent(TranslatingSuspendableChannel.java:103)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:72)
+	at org.xnio.nio.NioHandle.run(NioHandle.java:90)
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:198)
+	at ...asynchronous invocation...(Unknown Source)
+	at org.jboss.remoting3.EndpointImpl.doConnect(EndpointImpl.java:270)
+	at org.jboss.remoting3.EndpointImpl.doConnect(EndpointImpl.java:251)
+	at org.jboss.remoting3.EndpointImpl.connect(EndpointImpl.java:349)
+	at org.jboss.remoting3.EndpointImpl.connect(EndpointImpl.java:333)
+	at org.jboss.remotingjmx.RemotingConnector.internalRemotingConnect(RemotingConnector.java:230)
+	at org.jboss.remotingjmx.RemotingConnector.internalConnect(RemotingConnector.java:151)
+	at org.jboss.remotingjmx.RemotingConnector.connect(RemotingConnector.java:102)
+	at javax.management.remote.JMXConnectorFactory.connect(Unknown Source)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBoss71ServerConnection.createConnection(JBoss71ServerConnection.java:71)
+	... 6 more
+!SUBENTRY 1 org.jboss.ide.eclipse.as.core 4 0 2016-07-06 17:01:08.065
+!MESSAGE Authentication against the remote JBoss instance has failed. Please verify your management credentials in the server editor.
+!STACK 0
+javax.security.sasl.SaslException: Authentication failed: the server presented no authentication mechanisms
+	at org.jboss.remoting3.remote.ClientConnectionOpenListener$Capabilities.handleEvent(ClientConnectionOpenListener.java:388)
+	at org.jboss.remoting3.remote.ClientConnectionOpenListener$Capabilities.handleEvent(ClientConnectionOpenListener.java:242)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:72)
+	at org.xnio.channels.TranslatingSuspendableChannel.handleReadable(TranslatingSuspendableChannel.java:189)
+	at org.xnio.channels.TranslatingSuspendableChannel$1.handleEvent(TranslatingSuspendableChannel.java:103)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:72)
+	at org.xnio.channels.TranslatingSuspendableChannel.handleReadable(TranslatingSuspendableChannel.java:189)
+	at org.xnio.ssl.JsseConnectedSslStreamChannel.handleReadable(JsseConnectedSslStreamChannel.java:183)
+	at org.xnio.channels.TranslatingSuspendableChannel$1.handleEvent(TranslatingSuspendableChannel.java:103)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:72)
+	at org.xnio.nio.NioHandle.run(NioHandle.java:90)
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:198)
+	at ...asynchronous invocation...(Unknown Source)
+	at org.jboss.remoting3.EndpointImpl.doConnect(EndpointImpl.java:270)
+	at org.jboss.remoting3.EndpointImpl.doConnect(EndpointImpl.java:251)
+	at org.jboss.remoting3.EndpointImpl.connect(EndpointImpl.java:349)
+	at org.jboss.remoting3.EndpointImpl.connect(EndpointImpl.java:333)
+	at org.jboss.remotingjmx.RemotingConnector.internalRemotingConnect(RemotingConnector.java:230)
+	at org.jboss.remotingjmx.RemotingConnector.internalConnect(RemotingConnector.java:151)
+	at org.jboss.remotingjmx.RemotingConnector.connect(RemotingConnector.java:102)
+	at javax.management.remote.JMXConnectorFactory.connect(Unknown Source)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBoss71ServerConnection.createConnection(JBoss71ServerConnection.java:71)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:143)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:127)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.run(JBossServerConnection.java:116)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection.connectToStartedServer(JBossServerConnection.java:233)
+	at org.jboss.ide.eclipse.as.jmx.integration.JBossServerConnection$1.run(JBossServerConnection.java:225)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-06 17:01:30.880
+!MESSAGE Module EduMgmt published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-06 17:01:30.914
+!MESSAGE Module EduMgmtCommon published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-06 17:01:30.966
+!MESSAGE Module EduMgmtConfig published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-06 17:01:30.997
+!MESSAGE Module EduMgmtDataAccess published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-06 17:01:31.030
+!MESSAGE Module EduMgmtWeb published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-06 17:01:31.068
+!MESSAGE Module EduMgmtCommon published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-06 17:01:31.096
+!MESSAGE Module EduMgmtConfig published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-06 17:01:31.127
+!MESSAGE Module EduMgmtDataAccess published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-06 21:35:15.815
+!MESSAGE Server processes have been terminated.
